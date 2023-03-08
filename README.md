@@ -18,6 +18,46 @@ https://user-images.githubusercontent.com/83262469/223656129-0ff8af94-391e-4cac-
 
 
 
+# FOR CODEPATH INSTRUCTORS
+Submitted by: **Bright Dikko**
+
+This web app: **Kindly find description above**
+
+Time spent: **13** hours spent in total
+
+## Required Features
+
+The following **required** functionality is completed:
+
+- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
+- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
+A single card can be flipped at a time, you can't have more than one flipped card showing hints, at the same time. 
+- [x] **A list of card pairs is created**
+- [x] **Clicking on the card shows the corresponding component of the information pair**
+- [x] **Clicking the next button displays a random new card**
+
+The following **optional** features are implemented:
+
+- [x] Cards contains images in addition to or in place of text
+- [x] Cards have different visual styles such as color based on their category
+Card group have different but related images, based on the current trivia question.
+- [x] *visual style implemented*
+
+The following **additional** features are implemented:
+
+* [x] List anything else that you added to improve the site's functionality!
+- Responsiveness: Responsive on web and mobile devices
+- Interactivity: Locking and Unlocking on Answers, dynamic interations, animations
+
+## Video Walkthrough
+
+Scroll up to see video walkthrough
+
+## Notes
+
+Describe any challenges encountered while building the app.
+N/A
+
 ## License
 
     Copyright [2023]] [Bright Dikko]
