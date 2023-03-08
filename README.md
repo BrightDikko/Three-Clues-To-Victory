@@ -1,6 +1,8 @@
 #  Three Clues to Victory
 "Three Clues to Victory" is a fun trivia game that challenges players to solve a mystery using three cryptic clues. With various random categories and difficulty levels, players can compete against each other or work together as a team to guess the answer before time runs out.
 This project is developed by Bright Dikko.
+## FOR CODEPATH INSTRUCTORS
+Kindly scroll down to see move info on this project, as required. Thanks!
 
 # Features + Video Walkthrough
 > Click on the play button to see video walkthough
