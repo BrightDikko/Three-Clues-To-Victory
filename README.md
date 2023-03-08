@@ -3,7 +3,11 @@
 # Features + Video Walkthrough
 > Click on the play button to see video walkthough
 
+https://user-images.githubusercontent.com/83262469/223656129-0ff8af94-391e-4cac-9421-9d82d841ea39.mov
 
+
+![Screenshot 2023-03-08 at 3 03 18 AM](https://user-images.githubusercontent.com/83262469/223656106-8e09e78b-6f2e-423d-8524-08a31020a1dd.png)
+![Screenshot 2023-03-08 at 3 04 38 AM](https://user-images.githubusercontent.com/83262469/223656120-fef75257-2b1d-4bd1-af8a-d77a3d8ec4b4.png)
 
 
 
