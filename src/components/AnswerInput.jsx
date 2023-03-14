@@ -1,17 +1,36 @@
 import React from "react";
+import { useState } from "react";
 
-const BottomNavButtons = ({ showAnswer, navigationHandler }) => {
+const AnswerInput = ({ showAnswer, navigationHandler }) => {
+    const [enteredValue, setEnteredValue] = useState("");
     let displayAnswer = "🔐  Submit Answer";
     let answerShown = "🔓  Answer Available";
 
+    const inputChangeHandler = (event) => {
+        setEnteredValue(event.target.value);
+    };
+
     return (
-        <>
-            <div className=" flex justify-center items-center  px-6 lg:px-8">
+        <form className="flex flex-col justify-center items-center mt-6">
+            <input
+                type="text"
+                name="name"
+                id="name"
+                autoCorrect="off"
+                aria-autocomplete="off"
+                className="block min-w-[400px] h-14 px-5 text-lg mx-auto rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-300 sm:text-sm sm:leading-6"
+                placeholder="Enter your answer"
+                onChange={inputChangeHandler}
+            />
+            <div className=" flex justify-center items-center my-10  px-6 lg:px-8">
                 <div className=" flex justify-between space-x-4 align-ceter mx-auto max-w-2xl text-center">
                     <button
                         type="button"
                         className=" rounded-md bg-gray-200 py-5 px-5  text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-300 hover:duration-300 active:bg-gray-500 active:text-white"
-                        onClick={navigationHandler.bind(this, "previous")}
+                        onClick={() => {
+                            setEnteredValue("");
+                            navigationHandler.bind(this, "previous");
+                        }}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +51,7 @@ const BottomNavButtons = ({ showAnswer, navigationHandler }) => {
                     <button
                         type="button"
                         className="w-80 text-xl rounded-md bg-slate-700 py-5 px-10 font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-slate-500 hover:duration-300 active:bg-yellow-100 active:text-black "
-                        onClick={navigationHandler.bind(this, "show-answer")}
+                        onClick={navigationHandler.bind(this, enteredValue)}
                     >
                         {!showAnswer && displayAnswer}
                         {showAnswer && answerShown}
@@ -57,8 +76,7 @@ const BottomNavButtons = ({ showAnswer, navigationHandler }) => {
                     </button>
                 </div>
             </div>
-        </>
+        </form>
     );
 };
-
-export default BottomNavButtons;
+export default AnswerInput;

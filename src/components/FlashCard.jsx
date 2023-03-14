@@ -43,7 +43,7 @@ const FlashCard = ({ question, showAnswer }) => {
     }
 
     return (
-        <div className="mx-auto max-w-xl py-10 px-4 sm:py-16 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-xl pt-10 pb-8 px-4 sm:pt-16 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="flex mt-8">
                 <h2 className=" text-2xl font-bold tracking-tight  mr-4 text-gray-700">
                     Answer:{" "}
