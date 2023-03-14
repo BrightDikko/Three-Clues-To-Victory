@@ -1,3 +1,5 @@
+//This component is not in use anymore
+
 import React from "react";
 
 const BottomNavButtons = ({ showAnswer, navigationHandler }) => {

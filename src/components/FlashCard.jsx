@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import ReactCardFlip from "react-card-flip";
 
-const FlashCard = ({ question, showAnswer }) => {
+const FlashCard = ({ question, showAnswer, correctAnswer, userInputValue }) => {
     const [showHintButton, setShowHintButton] = useState({
         value: false,
         requester: null,
@@ -45,8 +45,14 @@ const FlashCard = ({ question, showAnswer }) => {
     return (
         <div className="mx-auto max-w-xl pt-10 pb-8 px-4 sm:pt-16 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="flex mt-8">
-                <h2 className=" text-2xl font-bold tracking-tight  mr-4 text-gray-700">
-                    Answer:{" "}
+                <h2
+                    className={
+                        !!userInputValue
+                            ? "w-40 text-2xl font-bold tracking-tight  mr-4 text-gray-700"
+                            : " text-2xl font-bold tracking-tight  mr-4 text-gray-700"
+                    }
+                >
+                    Answer:
                 </h2>
                 {!showAnswer && (
                     <>
@@ -66,10 +72,25 @@ const FlashCard = ({ question, showAnswer }) => {
                         </p>
                         <p className="text-2xl font-bold tracking-widest text-gray-900">
                             {namePartAfterSpace.toUpperCase()}
+                            {"  ✅ "}
                         </p>
                     </>
                 )}
             </div>
+
+            {!!userInputValue && (
+                <div className="flex">
+                    <p className="w-40  text-2xl font-bold tracking-tight  mr-4 text-gray-700">
+                        Your Entered:
+                    </p>
+                    <p className=" text-2xl tracking-widest  font-bold  mr-4 text-gray-700">
+                        {correctAnswer
+                            ? `${userInputValue} ✅`
+                            : `${userInputValue} ❎`}
+                    </p>
+                </div>
+            )}
+
             <h3 className="mt-8 text-base text-gray-500">
                 <p className="inline font-semibold mr-1 text-gray-700">
                     Instructions:{" "}
