@@ -28,7 +28,7 @@ Submitted by: **Bright Dikko**
 
 This web app: **Kindly find description above**
 
-Time spent: **13** hours spent in total
+Time spent: **13 + 6 = 18** hours spent in total
 
 
 ## Required Features for UNIT 3
