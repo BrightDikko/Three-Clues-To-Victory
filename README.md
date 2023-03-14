@@ -6,8 +6,8 @@ The second video shows the updates required for unit 3.
 Kindly scroll down to see move info on this project, as required. Thanks!
 
 # Features + Video Walkthrough
-> Click on the play button to see video walkthough. Great if you just want to quickly learn more from the trivia card, and not have to think too much about responding
-> Without Input Requirement for Validation.
+##Click on the play button to see video walkthough. 
+> Without Input Requirement for Validation. Great if you just want to quickly learn more from the trivia card, and not have to think too much about responding
 <video src="https://user-images.githubusercontent.com/83262469/223656129-0ff8af94-391e-4cac-9421-9d82d841ea39.mov"></video>
 
 > Requiring user input - interactive and fun gaming experience
