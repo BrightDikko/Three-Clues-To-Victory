@@ -40,12 +40,12 @@ const Trivia = () => {
             .join("")
             .toLowerCase();
 
-        console.log(userInput);
-        console.log(currentAnswer);
-
         if (userInput === currentAnswer) {
             setCorrectAnswer(true);
+        } else {
+            setCorrectAnswer(false);
         }
+
         setShowAnswer(true);
     };
     console.log("here");
