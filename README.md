@@ -8,10 +8,10 @@ Kindly scroll down to see move info on this project, as required. Thanks!
 # Features + Video Walkthrough
 > Click on the play button to see video walkthough. Great if you just want to quickly learn more from the trivia card, and not have to think too much about responding
 > Without Input Requirement for Validation.
-https://user-images.githubusercontent.com/83262469/223656129-0ff8af94-391e-4cac-9421-9d82d841ea39.mov
+<video src="https://user-images.githubusercontent.com/83262469/223656129-0ff8af94-391e-4cac-9421-9d82d841ea39.mov"></video>
 
 > Requiring user input - interactive and fun gaming experience
-https://user-images.githubusercontent.com/83262469/224918200-d1ae657c-c9e7-4a1a-8e43-7b5d179f69e4.mov
+<video src="https://user-images.githubusercontent.com/83262469/224918200-d1ae657c-c9e7-4a1a-8e43-7b5d179f69e4.mov"></video>
 
 >
 ## Responsive for web and mobile devices
