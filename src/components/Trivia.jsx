@@ -10,27 +10,53 @@ const NUMBER_OF_QUESTIONS = 2;
 const Trivia = () => {
     const [questionIndex, setQuestionIndex] = useState(0);
     const [showAnswer, setShowAnswer] = useState(false);
+    const [correctAnswer, setCorrectAnswer] = useState(false);
+    const [userInputValue, setUserInputValue] = useState("");
+
     const navigationHandler = (value) => {
-        console.log(value);
-        console.log(TriviaQuestions[questionIndex]["name"]);
         if (value === "previous" && questionIndex > 0) {
             setQuestionIndex((prev) => prev - 1);
             setShowAnswer(false);
-        } else if (value === "show-answer") {
-            setShowAnswer(true);
+            setUserInputValue("");
+            return;
         }
         if (value === "next" && questionIndex < NUMBER_OF_QUESTIONS) {
             setQuestionIndex((prev) => prev + 1);
             setShowAnswer(false);
+            setUserInputValue("");
+            return;
         }
-    };
 
+        setUserInputValue(value);
+        const userInput = value
+            .split("")
+            .filter((e) => e.trim().length)
+            .join("")
+            .toLowerCase();
+
+        const currentAnswer = TriviaQuestions[questionIndex]["name"]
+            .split("")
+            .filter((e) => e.trim().length)
+            .join("")
+            .toLowerCase();
+
+        console.log(userInput);
+        console.log(currentAnswer);
+
+        if (userInput === currentAnswer) {
+            setCorrectAnswer(true);
+        }
+        setShowAnswer(true);
+    };
+    console.log("here");
     return (
         <>
             <Header />
             <FlashCard
                 question={TriviaQuestions[questionIndex]}
                 showAnswer={showAnswer}
+                correctAnswer={correctAnswer}
+                userInputValue={userInputValue}
             />
             <AnswerInput
                 showAnswer={showAnswer}

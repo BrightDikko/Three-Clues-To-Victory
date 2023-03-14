@@ -10,6 +10,11 @@ const AnswerInput = ({ showAnswer, navigationHandler }) => {
         setEnteredValue(event.target.value);
     };
 
+    const submissionHandler = () => {
+        setEnteredValue("");
+        navigationHandler(enteredValue);
+    };
+
     return (
         <form className="flex flex-col justify-center items-center mt-6">
             <input
@@ -18,6 +23,7 @@ const AnswerInput = ({ showAnswer, navigationHandler }) => {
                 id="name"
                 autoCorrect="off"
                 aria-autocomplete="off"
+                value={enteredValue}
                 className="block min-w-[400px] h-14 px-5 text-lg mx-auto rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-300 sm:text-sm sm:leading-6"
                 placeholder="Enter your answer"
                 onChange={inputChangeHandler}
@@ -27,10 +33,7 @@ const AnswerInput = ({ showAnswer, navigationHandler }) => {
                     <button
                         type="button"
                         className=" rounded-md bg-gray-200 py-5 px-5  text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-300 hover:duration-300 active:bg-gray-500 active:text-white"
-                        onClick={() => {
-                            setEnteredValue("");
-                            navigationHandler.bind(this, "previous");
-                        }}
+                        onClick={navigationHandler.bind(this, "previous")}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +54,7 @@ const AnswerInput = ({ showAnswer, navigationHandler }) => {
                     <button
                         type="button"
                         className="w-80 text-xl rounded-md bg-slate-700 py-5 px-10 font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-slate-500 hover:duration-300 active:bg-yellow-100 active:text-black "
-                        onClick={navigationHandler.bind(this, enteredValue)}
+                        onClick={submissionHandler}
                     >
                         {!showAnswer && displayAnswer}
                         {showAnswer && answerShown}
