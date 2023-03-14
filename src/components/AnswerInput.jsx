@@ -16,7 +16,10 @@ const AnswerInput = ({ showAnswer, navigationHandler }) => {
     };
 
     return (
-        <form className="flex flex-col justify-center items-center mt-6">
+        <form
+            onSubmit={(event) => event.preventDefault()}
+            className="flex flex-col justify-center items-center mt-6"
+        >
             <input
                 type="text"
                 name="name"
